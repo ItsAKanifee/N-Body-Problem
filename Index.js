@@ -97,7 +97,7 @@ function Body(_mass, _pos, _vel, color) {
     this.draw = function () {
         ctx.beginPath();
         ctx.fillStyle = this.color;
-        ctx.arc(this.pos[0], this.pos[1], 10, 0, 2 * Math.PI);
+        ctx.arc(this.pos[0], this.pos[1], 9, 0, 2 * Math.PI);
         ctx.fill();
         ctx.closePath();
     }
