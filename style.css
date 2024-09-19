@@ -61,16 +61,17 @@ button{
     border: 1px solid rgb(255, 255, 255);
     padding: 10px;
 
-    animation-name : example;
-    animation-duration : 4s;
-    animation-iteration-count : infinite;
+    box-shadow : 1px 1px 38px black;
 }
 
 input{
     background-color: rgb(44, 47, 219);
-    color: black;
+    color: white;
     border-radius: 10px;
     margin: 20px;
+    text-align: center;
+
+    box-shadow : 1px 1px 1px black;
     
 }
 

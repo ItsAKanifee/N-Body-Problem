@@ -11,16 +11,29 @@ canvas.height = window.innerHeight;
 
 function setup() {
     drawStar();
-    let l1 = canvas.width / 2;
-    let l2 = canvas.width / 3;
-    let l3 = canvas.width / 3 * 2;
+    let mass1 = document.getElementById("mass1").value == 0 ? 10: parseFloat(document.getElementById("mass1").value);
+    let mass2 = document.getElementById("mass2").value == 0 ? 10: parseFloat(document.getElementById("mass2").value);
+    let mass3 = document.getElementById("mass3").value == 0 ? 10: parseFloat(document.getElementById("mass3").value);
 
-    let h1 = canvas.height / 3;
-    let h2 = canvas.height / 3 * 2;
+    let l1 = document.getElementById("xpos1").value == 0 ? canvas.width/2: parseFloat(document.getElementById("xpos1").value);
+    let l2 = document.getElementById("xpos2").value == 0 ? canvas.width/3: parseFloat(document.getElementById("xpos2").value);
+    let l3 = document.getElementById("xpos3").value == 0 ? canvas.width/3 * 2: parseFloat(document.getElementById("xpos3").value);
 
-    Planet1 = new Body(60, [l1, h1], [0, 0], "red");
-    Planet2 = new Body(20, [l2, h2], [0, -0.5], "blue");
-    Planet3 = new Body(40, [l3, h2], [0, 0], "green");
+    let h1 = document.getElementById("ypos1").value == 0 ? canvas.height/3: canvas.width -parseFloat(document.getElementById("ypos1").value);
+    let h2 = document.getElementById("ypos2").value == 0 ? canvas.height/3 * 2: canvas.width -parseFloat(document.getElementById("ypos2").value);
+    let h3 = document.getElementById("ypos3").value == 0 ? canvas.height/3 * 2: canvas.width -parseFloat(document.getElementById("ypos3").value);
+
+    let vx1 = document.getElementById("xvel1").value == 0 ? 0: parseFloat(document.getElementById("xvel1").value);
+    let vx2 = document.getElementById("xvel2").value == 0 ? 0: parseFloat(document.getElementById("xvel2").value);
+    let vx3 = document.getElementById("xvel3").value == 0 ? 0: parseFloat(document.getElementById("xvel3").value);
+
+    let vy1 = document.getElementById("yvel1").value == 0 ? 0: -parseFloat(document.getElementById("yvel1").value);
+    let vy2 = document.getElementById("yvel2").value == 0 ? 0: -parseFloat(document.getElementById("yvel2").value);
+    let vy3 = document.getElementById("yvel3").value == 0 ? 0: -parseFloat(document.getElementById("yvel3").value);
+
+    Planet1 = new Body(mass1, [l1, h1], [vx1, vy1], "red");
+    Planet2 = new Body(mass2, [l2, h2], [vx2, vy2], "blue");
+    Planet3 = new Body(mass3, [l3, h3], [vx3, vy3], "green");
 
     Planet1.setGravity(Planet2, Planet3);
     Planet2.setGravity(Planet1, Planet3);
