@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 25px;
@@ -44,3 +44,34 @@ button{
     cursor: pointer;
 
 }
+
+#containers{
+    color: white;
+    width: 100%;
+    height: 400px;
+}
+
+#Planet1, #Planet2, #Planet3{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    margin: 20px;
+    
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+
+    animation-name : example;
+    animation-duration : 4s;
+    animation-iteration-count : infinite;
+}
+
+input{
+    background-color: rgb(44, 47, 219);
+    color: black;
+    border-radius: 10px;
+    margin: 20px;
+    
+}
+
+

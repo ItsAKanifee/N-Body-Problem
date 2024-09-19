@@ -18,7 +18,7 @@ function setup() {
     let h1 = canvas.height / 3;
     let h2 = canvas.height / 3 * 2;
 
-    Planet1 = new Body(6000, [l1, h1], [0, 0], "red");
+    Planet1 = new Body(60, [l1, h1], [0, 0], "red");
     Planet2 = new Body(20, [l2, h2], [0, -0.5], "blue");
     Planet3 = new Body(40, [l3, h2], [0, 0], "green");
 
@@ -89,7 +89,7 @@ function Body(_mass, _pos, _vel, color) {
         ctx.closePath();
     }
 
-    this.update = function (p1, p2) {
+    this.update = function () {
 
         this.pos[0] += this.vel[0];
         this.pos[1] += this.vel[1];
@@ -116,9 +116,9 @@ function run() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawStar();
 
-    Planet1.update(Planet2, Planet3);
-    Planet2.update(Planet1, Planet3);
-    Planet3.update(Planet1, Planet2);
+    Planet1.update();
+    Planet2.update();
+    Planet3.update();
 
     if(Planet1.outBounds() && Planet2.outBounds() && Planet3.outBounds()){
         reset();

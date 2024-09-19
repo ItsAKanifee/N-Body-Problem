@@ -17,9 +17,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="info1"></div>
-            <p>Three Body Problem Simulation</p>
-        </div>
+        <p>Three Body Problem Simulation</p>
+        
 
         <canvas id="canvas"></canvas>
 
@@ -29,9 +28,41 @@
         <button onclick= "run()">Run</button>
         <button onclick= "reset()">Reset</button>
 
-        <div id ="Planet 1 container">Planet 1</div>
-        <div id ="Planet 2 container">Planet 2</div>
-        <div id ="Planet 3 container">Planet 3</div>
+        <br>
+
+        <div id = "containers">
+            <div id ="Planet1">Planet 1
+                <br>
+                <br>
+                <input id="mass" placeholder="Mass (10^24kg)">
+                <input id="xpos" placeholder="X Position (m)">
+                <input id="ypos" placeholder="Y Position (m)">
+                <input id="xvel" placeholder="X Velocity (m/s)">
+                <input id="yvel" placeholder="Y Velocity (m/s)">
+
+            </div>
+            <div id ="Planet2">Planet 2
+                <br>
+                <br>
+                <input id="mass" placeholder="Mass (10^24kg)">
+                <input id="xpos" placeholder="X Position (m)">
+                <input id="ypos" placeholder="Y Position (m)">
+                <input id="xvel" placeholder="X Velocity (m/s)">
+                <input id="yvel" placeholder="Y Velocity (m/s)">
+
+            </div>
+            <div id ="Planet3">Planet 3
+                <br>
+                <br>
+                <input id="mass" placeholder="Mass (10^24kg)">
+                <input id="xpos" placeholder="X Position (m)">
+                <input id="ypos" placeholder="Y Position (m)">
+                <input id="xvel" placeholder="X Velocity (m/s)">
+                <input id="yvel" placeholder="Y Velocity (m/s)">
+
+            </div>
+        </div>
+        
         
         <script src="Index.js" async defer></script>
     </body>
