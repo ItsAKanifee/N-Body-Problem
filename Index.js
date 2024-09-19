@@ -10,6 +10,7 @@ canvas.height = window.innerHeight;
 
 
 function setup() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawStar();
     let mass1 = document.getElementById("mass1").value == 0 ? 10: parseFloat(document.getElementById("mass1").value);
     let mass2 = document.getElementById("mass2").value == 0 ? 10: parseFloat(document.getElementById("mass2").value);
@@ -19,9 +20,9 @@ function setup() {
     let l2 = document.getElementById("xpos2").value == 0 ? canvas.width/3: parseFloat(document.getElementById("xpos2").value);
     let l3 = document.getElementById("xpos3").value == 0 ? canvas.width/3 * 2: parseFloat(document.getElementById("xpos3").value);
 
-    let h1 = document.getElementById("ypos1").value == 0 ? canvas.height/3: canvas.width -parseFloat(document.getElementById("ypos1").value);
-    let h2 = document.getElementById("ypos2").value == 0 ? canvas.height/3 * 2: canvas.width -parseFloat(document.getElementById("ypos2").value);
-    let h3 = document.getElementById("ypos3").value == 0 ? canvas.height/3 * 2: canvas.width -parseFloat(document.getElementById("ypos3").value);
+    let h1 = document.getElementById("ypos1").value == 0 ? canvas.height/3: canvas.height - parseFloat(document.getElementById("ypos1").value);
+    let h2 = document.getElementById("ypos2").value == 0 ? canvas.height/3 * 2: canvas.height - parseFloat(document.getElementById("ypos2").value);
+    let h3 = document.getElementById("ypos3").value == 0 ? canvas.height/3 * 2: canvas.height - parseFloat(document.getElementById("ypos3").value);
 
     let vx1 = document.getElementById("xvel1").value == 0 ? 0: parseFloat(document.getElementById("xvel1").value);
     let vx2 = document.getElementById("xvel2").value == 0 ? 0: parseFloat(document.getElementById("xvel2").value);
