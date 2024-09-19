@@ -8,7 +8,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 
-
 function setup() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawStar();
