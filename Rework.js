@@ -15,13 +15,16 @@ class Body{
     set_planets(planets){
         this.planets = planets;
         
-        for(let i = 0; i < planets.length(); i++){
+        for(let i = 0; i < planets.length; i++){
             this.radii.append([this.pos[0] - planets[i].pos[0], this.pos[1] - planets[i].pos[1]]);   
         }
     }
 
 
     setGravity(){
+        for(let i = 0; i < this.radii.length; i++){
+            
+        }
             
         
     }
